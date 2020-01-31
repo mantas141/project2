@@ -13,8 +13,10 @@ include_once('./cfg/database_connect.inc');
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
 </head>
-<body class='grey darken-2'>
+<body class='grey darken-1'>
 <div class='container'>
     <header>
         <nav>
@@ -34,35 +36,38 @@ include_once('./cfg/database_connect.inc');
 </header>
 </div>
 <div class='container'>
-
-
-<?php 
-if(isset($_REQUEST['page'])){
-    $switch = $_REQUEST['page'];
-    switch($switch){
-        case 'prices_log':
-            include('./prices_log/default.inc');
-            break;
-        case 'profit_tool':
-            include('./profit_tool/default.inc');
-            break;
-        case 'raid_log':
-            include('./raid_log/default.inc');
-            break;
-        case 'gun_modding':
-            include('./gun_modding/default.inc');
-            break;
-        case 'barter':
-            include('./barter/default.inc');
-            break;
-        case 'quest_list':
-            include('./quest_list/default.inc');
-            break;
+    
+    
+    
+    <?php 
+    if(isset($_REQUEST['page'])){
+        $switch = $_REQUEST['page'];
+        switch($switch){
+            case 'prices_log':
+                include('./prices_log/default.inc');
+                break;
+            case 'profit_tool':
+                include('./profit_tool/default.inc');
+                break;
+            case 'raid_log':
+                include('./raid_log/default.inc');
+                break;
+            case 'gun_modding':
+                include('./gun_modding/default.inc');
+                break;
+            case 'barter':
+                include('./barter/default.inc');
+                break;
+            case 'quest_list':
+                include('./quest_list/default.inc');
+                break;
+        }
     }
-}
+    
+    
+    ?>
+    
 
-
-?>
 </div>
 <!--JavaScript at end of body for optimized loading-->
 <script type="text/javascript" src="js/materialize.min.js"></script>
