@@ -1,20 +1,26 @@
 
 <script>
 function navigate(link, id){
-	console.log(link);
-	console.log(id);
+
 	$.ajax({
     	type: "POST",
     	beforeSend: function(){
         },
-    	url: './prices_log/link.php', //will return 1 or 0
+    	url: './prices_log/link.php', 
     	data: {"page": id},
     	success: function(data){
 			$('#replace').html(data);
     	},
     	error: function(data){
 	    	
-    	}});
+    	}}); //TODO Change color of selected link and merge it with the generated content
+}
+
+function Search(){
+	var SearchVal = $('#000').val();
+	$("tbody > *").hide();
+	console.log($("table > *").find($("[id*='"+SearchVal+"']")).show());
+	$("tbody > *").find($("[id*='"+SearchVal+"']")).show()
 }
 
 </script>

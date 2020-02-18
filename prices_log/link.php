@@ -1,14 +1,17 @@
 <?php 
+include_once('../cfg/database_connect.inc');
+
+
 $id = $_REQUEST['page'];
 switch($id){
     case '1':
-        include('./prices_log/log.inc');
+        include('../prices_log/log.inc');
         break;
     case '2':
-        include('./prices_log/Compare.inc');
+        include('../prices_log/Compare.inc');
         break;
     case '3':
-        include('./prices_log/Items.inc');
+        include('../prices_log/Items.inc');
         break;
 }
 
