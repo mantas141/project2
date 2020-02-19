@@ -16,7 +16,7 @@ include_once('./cfg/database_connect.inc');
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       
 </head>
-<body class='grey darken-1'>
+<body class='grey lighten-1'>
 <div class='container'>
     <header>
         <nav>
@@ -27,7 +27,7 @@ include_once('./cfg/database_connect.inc');
             		<li><a href='?page=profit_tool'>Profit tool</a></li>
             		<li><a href='?page=raid_log'>Raid log</a></li>
             		<li><a href='?page=gun_modding'>Gun modding</a></li>
-            		<li><a href='?page=barter'>Barter</a></li>
+            		<li><a href='?page=barter'>Barter/Hideout</a></li>
             		<li><a href='?page=quest_list'>Quest list</a></li>
             	</ul>
             </div>
