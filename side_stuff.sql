@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 19, 2020 at 03:36 PM
+-- Generation Time: Feb 21, 2020 at 04:25 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -28,6 +28,9 @@ USE `side_stuff`;
 
 --
 -- Table structure for table `crafting_stations`
+--
+-- Creation: Feb 19, 2020 at 11:58 AM
+-- Last update: Feb 19, 2020 at 01:12 PM
 --
 
 CREATE TABLE `crafting_stations` (
@@ -55,6 +58,8 @@ INSERT INTO `crafting_stations` (`ID`, `Name`, `MaxLevel`, `Used_in_crafting`) V
 --
 -- Table structure for table `eft`
 --
+-- Creation: Jan 30, 2020 at 01:49 PM
+--
 
 CREATE TABLE `eft` (
   `ID` int(11) NOT NULL,
@@ -75,6 +80,9 @@ INSERT INTO `eft` (`ID`, `one`, `two`, `three`) VALUES
 
 --
 -- Table structure for table `hideout_crafting`
+--
+-- Creation: Feb 19, 2020 at 01:10 PM
+-- Last update: Feb 19, 2020 at 03:31 PM
 --
 
 CREATE TABLE `hideout_crafting` (
@@ -99,12 +107,16 @@ CREATE TABLE `hideout_crafting` (
 --
 
 INSERT INTO `hideout_crafting` (`ID`, `Output`, `AmountO`, `Item1`, `Amount1`, `Item2`, `Amount2`, `Item3`, `Amount3`, `Item4`, `Amount4`, `Time`, `Station_ID`, `Station_level`) VALUES
-(1, 138, 1, 139, 2, 140, 1, NULL, NULL, NULL, NULL, '3:30', 1, 1);
+(1, 138, 1, 139, 2, 140, 1, NULL, NULL, NULL, NULL, '3:30', 1, 1),
+(2, 82, 3, 145, 1, 146, 1, 147, 1, NULL, NULL, '34:13', 2, 2);
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `items`
+--
+-- Creation: Feb 19, 2020 at 11:31 AM
+-- Last update: Feb 19, 2020 at 03:29 PM
 --
 
 CREATE TABLE `items` (
@@ -265,12 +277,18 @@ INSERT INTO `items` (`ID`, `Item_name`, `Type`, `Grid_size`, `Size`, `Quest_item
 (137, 'Slim diary', 'Generic loot', '1x1', 1, 0, NULL, NULL, NULL, NULL, 'SlimDiary', NULL),
 (138, '\"Fierce Hatchling\" moonshine', 'Generic loot', '1x2', 2, 0, NULL, NULL, NULL, NULL, 'moonshine', NULL),
 (139, 'Pack of sugar', 'Generic loot', '1x1', 1, 0, NULL, NULL, NULL, NULL, 'Sugar', NULL),
-(140, 'Purified water', 'Generic loot', '2x2', 4, 0, NULL, NULL, NULL, NULL, 'Superwater', NULL);
+(140, 'Purified water', 'Generic loot', '2x2', 4, 0, NULL, NULL, NULL, NULL, 'Superwater', NULL),
+(145, 'Broken GPhone', 'Generic loot', '1x1', 1, 1, 3, NULL, NULL, NULL, 'Broken_GPhone', NULL),
+(146, 'Broken GPhone X', 'Generic loot', '1x1', 1, 0, NULL, NULL, NULL, NULL, 'GPhoneX', NULL),
+(147, 'SSD Drive', 'Generic loot', '1x1', 1, 0, NULL, NULL, NULL, NULL, 'SSD', NULL);
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `items_prices`
+--
+-- Creation: Feb 17, 2020 at 03:33 PM
+-- Last update: Feb 19, 2020 at 08:04 AM
 --
 
 CREATE TABLE `items_prices` (
@@ -359,13 +377,13 @@ ALTER TABLE `eft`
 -- AUTO_INCREMENT for table `hideout_crafting`
 --
 ALTER TABLE `hideout_crafting`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
 
 --
 -- AUTO_INCREMENT for table `items_prices`
