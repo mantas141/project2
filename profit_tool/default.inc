@@ -1,5 +1,20 @@
 
 <script>
+$(document).ready(function(){
+	id = 1;
+	$.ajax({
+    	type: "POST",
+    	beforeSend: function(){
+        },
+    	url: './profit_tool/link.php', 
+    	data: {"page": id},
+    	success: function(data){
+			$('#replace').html(data);
+    	},
+    	error: function(data){
+	    	
+    	}}); //TODO Change color of selected link and merge it with the generated content
+});
 function navigate(link, id){
 
 	$.ajax({
